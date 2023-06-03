@@ -71,5 +71,14 @@ cd reaper-container
 podman build -t reaper .
 
 # Run the image. This will bind the REAPER license on the host machine to the container
-podman run --rm --name reaper -e DISPLAY=$IP:0 -e XAUTHORITY=/.Xauthority --net host -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/.Xauthority:/.Xauthority -v ~/Library/"Application Support"/REAPER/reaper-license.rk:/opt/REAPER/reaper-license.rk reaper
+podman run \
+    --rm \
+    --name reaper \
+    -e DISPLAY=$IP:0 \
+    -e XAUTHORITY=/.Xauthority \
+    --net host \
+    -v /tmp/.X11-unix:/tmp/.X11-unix \
+    -v ~/.Xauthority:/.Xauthority \
+    -v ~/Library/"Application Support"/REAPER/reaper-license.rk:/opt/REAPER/reaper-license.rk \
+    reaper
 ```
