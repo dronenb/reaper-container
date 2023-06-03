@@ -53,6 +53,9 @@ xhost +$IP
 
 ### Podman
 ```
+# Install podman
+brew install podman
+
 # Initialize and start the Podman VM
 podman machine init
 podman machine start
