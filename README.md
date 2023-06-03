@@ -30,6 +30,7 @@ Homebrew is necessary to install some of the prerequisites for this project. You
 ### XQuartz
 
 ```
+# Install xquartz
 brew install --cask xquartz
 
 # Open xaurtz
